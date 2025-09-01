@@ -6,66 +6,108 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Centraliza tudo na tela */
 body {
-  background: #f2f2f2;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #e0e7ff 0%, #f8fafc 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.cabecalho {
+  background: linear-gradient(90deg, #0C1D4A 60%, #25d9f0 100%);
+  color: #fff;
+  text-align: center;
+  padding: 32px 0 24px 0;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 8px rgba(12,29,74,0.12);
+  border-radius: 0 0 18px 18px;
+}
+
+.container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-/* Caixa principal */
-.container {
+.nota {
   background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  width: 350px;
-  text-align: center;
+  width: 380px;
+  border-radius: 18px;
+  padding: 28px 24px;
+  box-shadow: 0 6px 24px rgba(12,29,74,0.10);
+  transition: box-shadow 0.3s;
+}
+.nota:hover {
+  box-shadow: 0 12px 32px rgba(12,29,74,0.18);
 }
 
-/* Título */
-#cabecalho {
-  font-size: 22px;
-  margin-bottom: 10px;
-  color: #333;
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-#linha {
-  border: none;
-  height: 2px;
-  background: #1ec9f4;
-  margin: 15px auto 25px;
-  width: 80%;
-  border-radius: 2px;
-}
-
-/* Input */
-#valorDesconto {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  background: #e9ecef;
-  border-radius: 8px;
-  margin-bottom: 20px;
+.formulario label {
+  font-weight: bold;
+  color: #0C1D4A;
   font-size: 14px;
 }
 
-/* Botão */
-#btn {
-  width: 100%;
-  padding: 12px;
-  border: none;
+.formulario input {
+  padding: 10px;
+  border: 1px solid #d1d5db;
   border-radius: 8px;
-  background: #1ec9f4;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+.formulario input:focus {
+  outline: none;
+  border: 1px solid #25d9f0;
+  box-shadow: 0 0 0 2px rgba(37,217,240,0.2);
+}
+
+.valor-final {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: 8px 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-top: 1px dashed #d1d5db;
+  color: #0C1D4A;
+}
+
+.valor-final span:last-child {
+  color: #25d9f0;
+  font-size: 1.2rem;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.botao {
+  background: linear-gradient(90deg, #25d9f0 60%, #0C1D4A 100%);
   color: #fff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 10px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  box-shadow: 0 2px 8px rgba(12,29,74,0.10);
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
-#btn:hover {
-  background: #15b2da;
+.botao:hover {
+  background: linear-gradient(90deg, #1bb8cc 60%, #0C1D4A 100%);
+  box-shadow: 0 4px 16px rgba(12,29,74,0.18);
 }
